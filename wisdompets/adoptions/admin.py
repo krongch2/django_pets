@@ -7,7 +7,7 @@ class PetAdmin(admin.ModelAdmin):
     list_display = ['name', 'species', 'breed', 'age', 'sex']
     change_list_template = 'admin/my_change_list.html'
     # date_hierarchy = 'created'
-    list_filter = ['sex', 'age']
+    list_filter = ['sex', 'age', 'species']
 
 
     def changelist_view(self, request, extra_context=None):
@@ -38,9 +38,5 @@ class PetAdmin(admin.ModelAdmin):
                 m += 1
             elif pet.sex == 'F':
                 f += 1
-        print(m)
-        print(f)
         response.context_data['sex_summary'] = [{'sex': 'Male', 'count': m}, {'sex': 'Female', 'count': f}]
-
-
         return response
