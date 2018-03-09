@@ -130,9 +130,9 @@ STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # print(BASE_DIR)
-PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+# PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
 # BOWER_COMPONENTS_ROOT = os.path.join(PROJECT_DIR, 'components')
-STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
+# STATIC_ROOT = os.path.join(PROJECT_DIR, 'static')
 # print(PROJECT_DIR)
 # print(STATIC_ROOT)
 
