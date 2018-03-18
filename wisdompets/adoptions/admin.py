@@ -4,10 +4,10 @@ from .models import Pet
 
 @admin.register(Pet)
 class PetAdmin(admin.ModelAdmin):
-    list_display = ['name', 'species', 'breed', 'age', 'sex']
-    change_list_template = 'admin/my_change_list.html'
-    # date_hierarchy = 'created'
-    list_filter = ['sex', 'age', 'species']
+    list_display = ['name', 'species', 'breed', 'age', 'sex', 'submission_date']
+    change_list_template = 'admin/my_cl2.html'
+    # date_hierarchy = 'submission_date'
+    list_filter = ['sex', 'species']
 
 
     def changelist_view(self, request, extra_context=None):
